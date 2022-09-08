@@ -148,6 +148,12 @@ const Detail = styled(motion.div)`
   img {
     width: 100%;
   }
+  @media (max-width: 767px) {
+    padding: 2rem 2rem;
+  }
+  @media (max-width: 480px) {
+    padding: 2rem 1rem;
+  }
 `;
 
 const Stats = styled(motion.div)`
@@ -168,6 +174,8 @@ const Info = styled(motion.div)`
 const Platforms = styled(motion.div)`
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 1rem;
   img {
     margin-left: 3rem;
   }
@@ -181,7 +189,10 @@ const Media = styled(motion.div)`
 `;
 
 const Description = styled(motion.div)`
-  margin: 5rem 0rem;
+  margin: 4rem 0rem;
+  p {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+  }
 `;
 
 export default GameDetails;

@@ -26,7 +26,7 @@ const Nav = () => {
     dispatch({ type: 'CLEAR_SEARCHED' });
   };
   return (
-    <StyledNav variants={fadeIn} initial="hidden" animate="show">
+    <StyledNav variants={fadeIn} initial='hidden' animate='show'>
       <StyledLogo onClick={clearSearch}>
         <img src={logo} alt='logo' />
         <h1>GAME 24h</h1>
@@ -45,7 +45,7 @@ const StyledNav = styled(motion.nav)`
   padding: 3rem 5rem;
   text-align: center;
   input {
-    width: 30%;
+    max-width: 50%;
     font-size: 1.5rem;
     padding: 0.5rem;
     border: none;
@@ -59,6 +59,9 @@ const StyledNav = styled(motion.nav)`
     cursor: pointer;
     background: #ff7676;
     color: white;
+  }
+  @media (max-width: 767px) {
+    padding: 2rem 2rem;
   }
 `;
 const StyledLogo = styled(motion.div)`
